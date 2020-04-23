@@ -25,16 +25,14 @@ export default function Cats() {
   return (
     <div>
       {Object.keys(data).map(item => (
-        <div key={item}>
-          <div className="container">
-            {data.all.map(item => (
-              <div key={item._id}>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
+        <div className="container">
+          {data.all.map(item => (
+            <div key={item._id}>
+              <p>{item.text}</p>
+            </div>
           ))}
         </div>
+      ))}
       ))}
     </div>
   );
